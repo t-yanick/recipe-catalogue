@@ -5,12 +5,12 @@ export const fetchCategoriesStart = () => ({
   type: CategoriesActionTypes.FETCH_DATA_START,
 });
 
-export const fetchCategoriesSuccess = () => ({
+export const fetchCategoriesSuccess = (categories) => ({
   type: CategoriesActionTypes.FETCH_DATA_SUCCESS,
   categories,
 });
 
-export const fetchCategoriesFailure = () => ({
+export const fetchCategoriesFailure = (error) => ({
   type: CategoriesActionTypes.FETCH_DATA_FAILURE,
   error,
 });
