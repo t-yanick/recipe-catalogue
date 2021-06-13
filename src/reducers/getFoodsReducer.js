@@ -1,7 +1,7 @@
 import { FoodsActionTypes } from '../actions/actionTypes';
 
 const INITIAL_STATE = {
-  foods: [],
+  meals: [],
   isFetching: false,
   errorMessage: undefined,
 };
@@ -16,7 +16,7 @@ const foodsReducer = (state = INITIAL_STATE, action) => {
     case FoodsActionTypes.FETCH_FOODS_SUCCESS:
       return {
         ...state,
-        foods: action.foods,
+        meals: action.meals,
         isFetching: false,
       };
     case FoodsActionTypes.FETCH_FOODS_FAILURE:
