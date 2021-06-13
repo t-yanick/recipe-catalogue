@@ -19,7 +19,7 @@ export const fetchCategoriesStartAsync = () => {
   return dispatch => {
     dispatch(fetchCategoriesStart());
     axios
-      .get('www.themealdb.com/api/json/v1/1/categories.php')
+      .get('https://www.themealdb.com/api/json/v1/1/categories.php')
       .then(res => dispatch(fetchCategoriesSuccess(res.data.categories)))
       .catch(error => dispatch(fetchCategoriesFailure(error)))
   };

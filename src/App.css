@@ -32,3 +32,9 @@ body {
 h1 {
   list-style: none;
 }
+
+.category {
+  width: 250px;
+  height: 35px;
+  border-radius: 15px;
+}
