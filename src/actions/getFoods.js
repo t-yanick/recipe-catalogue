@@ -15,11 +15,11 @@ export const fetchFoodsFailure = (error) => ({
   error,
 });
 
-export const fetchFoodsStartAsync = () => {
+export const fetchFoodsStartAsync = (foods) => {
   return dispatch => {
     dispatch(fetchFoodsStart());
     axios
-      .get(`https://www.themealdb.com/api/json/v1/1/list.php?c=${foods}`)
+      .get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${foods}`)
       .then(res => dispatch(fetchFoodsSuccess(res.data.foods)))
       .catch(error => dispatch(fetchFoodsFailure(error)))
   };
