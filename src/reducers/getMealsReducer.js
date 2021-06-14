@@ -1,4 +1,4 @@
-import { FoodsActionTypes } from '../actions/actionTypes';
+import { MealsActionTypes } from '../actions/actionTypes';
 
 const INITIAL_STATE = {
   meals: [],
@@ -6,20 +6,20 @@ const INITIAL_STATE = {
   errorMessage: undefined,
 };
 
-const foodsReducer = (state = INITIAL_STATE, action) => {
+const mealsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case FoodsActionTypes.FETCH_FOODS_START:
+    case MealsActionTypes.FETCH_MEALS_START:
       return {
         ...state,
         isFetching: true,
       };
-    case FoodsActionTypes.FETCH_FOODS_SUCCESS:
+    case MealsActionTypes.FETCH_MEALS_SUCCESS:
       return {
         ...state,
         meals: action.meals,
         isFetching: false,
       };
-    case FoodsActionTypes.FETCH_FOODS_FAILURE:
+    case MealsActionTypes.FETCH_MEALS_FAILURE:
       return {
         ...state,
         errorMessage: action.error,
@@ -30,4 +30,4 @@ const foodsReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default foodsReducer;
+export default mealsReducer;

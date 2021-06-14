@@ -4,10 +4,10 @@ const CategoriesActionTypes = {
   FETCH_DATA_FAILURE: 'FETCH_DATA_FAILURE',
 };
 
-const FoodsActionTypes = {
-  FETCH_FOODS_START: 'FETCH_FOODS_START',
-  FETCH_FOODS_SUCCESS: 'FETCH_FOODS_SUCCESS',
-  FETCH_FOODS_FAILURE: 'FETCH_FOODS_FAILURE',
+const MealsActionTypes = {
+  FETCH_MEALS_START: 'FETCH_MEALS_START',
+  FETCH_MEALS_SUCCESS: 'FETCH_MEALS_SUCCESS',
+  FETCH_MEALS_FAILURE: 'FETCH_MEALS_FAILURE',
 };
 
-export { CategoriesActionTypes, FoodsActionTypes };
+export { CategoriesActionTypes, MealsActionTypes };

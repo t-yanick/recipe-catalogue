@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import categoriesReducer from './getCategoriesReducer';
-import foodsReducer from './getFoodsReducer'
+import mealsReducer from './getMealsReducer'
 
 const rootReducer = combineReducers({
   categories: categoriesReducer,
-  foods: foodsReducer,
+  meals: mealsReducer,
 });
 
 export default rootReducer;

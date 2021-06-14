@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Categories from '../components/Categories';
-import FoodList from './FoodList';
+import MealList from './MealList';
 
 const Home = () => {
   const [state, setState] = useState('Beef');
-  // const dispatch = useDispatch
+  const dispatch = useDispatch
 
   const handleCategoryChange = (category) => {
     setState(category);
@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       <Categories onCategoryChange={handleCategoryChange} />
-      <FoodList handleChange={handleCategoryChange} cat={state} />
+      <MealList handleChange={handleCategoryChange} cat={state} />
     </div>
   );
 };

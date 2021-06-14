@@ -2,26 +2,24 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  Grid, Image, Card, Container,
-} from 'semantic-ui-react';
-import { fetchFoodsStartAsync } from '../actions/getFoods';
+import { Grid, Image, Card, Container } from 'semantic-ui-react';
+import { fetchMealsStartAsync } from '../actions/getMeals';
 
-const FoodList = (props) => {
-  const { category } = props;
-  const meals = useSelector(state => state.meals?.meals);
-  // const meals = useSelector(state => state.meals.meals);
+const MealList = (props) => {
+  const { cat } = props;
+  // const meals = useSelector(state => state.meals?.meals);
+  const meals = useSelector(state => state.meals.meals);
   // const meals = useSelector(state => { console.log(state); return state.meals })
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchFoodsStartAsync(category));
-  }, [category, dispatch]);
+    dispatch(fetchMealsStartAsync(cat));
+  }, [cat]);
 
   return (
     <Container textalign="center" style={{ marginTop: 40 }}>
-      <Grid columns={3}>
+      <Grid columns={4}>
         <Grid.Row>
           {meals && meals.map(meal => (
             <Grid.Column
@@ -33,14 +31,14 @@ const FoodList = (props) => {
                 id: meal.idMeal,
               }}
             >
-              <Card>
-                <Image src={meal.strMealThumb} />
-                <Card.Content>
-                  <Card.Description>
-                    {meal.strMeal}
-                  </Card.Description>
+              {/* <Card> */}
+              <Image src={meal.strMealThumb} />
+              {/* <Card.Content>
+                  <Card.Description> */}
+              {meal.strMeal}
+              {/* </Card.Description>
                 </Card.Content>
-              </Card>
+              </Card> */}
             </Grid.Column>
           ))}
         </Grid.Row>
@@ -49,12 +47,12 @@ const FoodList = (props) => {
   );
 };
 
-FoodList.propTypes = {
-  category: PropTypes.string,
+MealList.propTypes = {
+  cat: PropTypes.string,
 };
 
-FoodList.defaultProps = {
-  category: '',
+MealList.defaultProps = {
+  cat: '',
 };
 
-export default FoodList;
+export default MealList;
