@@ -12,9 +12,11 @@ body {
 }
 
 .nav {
-  background-color: rgb(36, 5, 5);
+  background-color: rgb(70, 15, 15);
   display: flex;
   justify-content: space-around;
+  position: sticky;
+  height: 5rem;
 }
 
 .navLinks {
@@ -22,11 +24,17 @@ body {
   list-style: none;
 }
 
+.navLinks li {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
 .navLists {
   color: white;
   font-size: 20px;
   font-weight: bold;
   margin: 0 10px 0 0;
+  list-style: none;
 }
 
 h1 {
