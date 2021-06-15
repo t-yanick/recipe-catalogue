@@ -33,10 +33,10 @@ const MealList = (props) => {
                   id: meal.idMeal,
                 }}
               >
-                <Card className="m-1 mx-4 pb-1" style={{ width: '18rem' }}>
+                <Card className="m-1 mx-4 pb-1 Card" style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={meal.strMealThumb} />
                   <Card.Body>
-                    <Card.Title>
+                    <Card.Title className="CardTitle">
                       {meal.strMeal}
                     </Card.Title>
                     <Button variant="primary">
