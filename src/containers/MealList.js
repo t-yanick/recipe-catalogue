@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Grid, Container } from 'semantic-ui-react';
 import Button from 'react-bootstrap/Button';
-import { fetchMealsStartAsync } from '../actions/getMeals';
 import { CardColumns } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import { fetchMealsStartAsync } from '../actions/getMeals';
 
 const MealList = (props) => {
   const { cat } = props;
-  const meals = useSelector(state => state.meals.meals);
+  const meals = useSelector((state) => state.meals.meals);
 
   const dispatch = useDispatch();
 
@@ -20,10 +20,10 @@ const MealList = (props) => {
 
   return (
     <Container textalign="center" style={{ marginTop: 40 }}>
-      <Grid >
+      <Grid>
         <Grid.Row>
           {
-            meals && meals.map(meal => (
+            meals && meals.map((meal) => (
               <CardColumns
                 key={meal.strMeal}
                 style={{ marginTop: 20 }}
@@ -33,7 +33,7 @@ const MealList = (props) => {
                   id: meal.idMeal,
                 }}
               >
-                <Card className="m-2 pb-1" style={{ width: "18rem" }}>
+                <Card className="m-2 pb-1" style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={meal.strMealThumb} />
                   <Card.Body>
                     <Card.Title>
@@ -41,7 +41,7 @@ const MealList = (props) => {
                     </Card.Title>
                     <Button variant="primary">
                       Get Recipe
-                  </Button>
+                    </Button>
                   </Card.Body>
                 </Card>
               </CardColumns>

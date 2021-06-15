@@ -15,12 +15,10 @@ export const fetchIngredientsFailure = (error) => ({
   error,
 });
 
-export const fetchIngredientsStartAsync = (id) => {
-  return dispatch => {
-    dispatch(fetchIngredientsStart());
-    axios
-      .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-      .then(res => dispatch(fetchIngredientsSuccess(res.data.meals)))
-      .catch(error => dispatch(fetchIngredientsFailure(error)))
-  };
+export const fetchIngredientsStartAsync = (id) => (dispatch) => {
+  dispatch(fetchIngredientsStart());
+  axios
+    .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+    .then((res) => dispatch(fetchIngredientsSuccess(res.data.meals)))
+    .catch((error) => dispatch(fetchIngredientsFailure(error)));
 };

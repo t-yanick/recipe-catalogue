@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchIngredientsStartAsync())
+    dispatch(fetchIngredientsStartAsync());
   }, []);
 
   return (

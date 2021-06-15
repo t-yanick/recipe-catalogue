@@ -4,14 +4,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchCategoriesStartAsync } from '../actions/getCategories';
 
 const Categories = (props) => {
-  const categories = useSelector(state => state.categories.categories);
+  const categories = useSelector((state) => state.categories.categories);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchCategoriesStartAsync());
   });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     props.onCategoryChange(e.target.value);
   };
 
@@ -19,7 +19,7 @@ const Categories = (props) => {
     <div>
       <h3 className="mt-2">Select a category</h3>
       <select className="category" placeholder="Select Category" onChange={handleChange}>
-        {categories && categories.map(cat => (
+        {categories && categories.map((cat) => (
           <option key={cat.idCategory} value={cat.strCategory}>
             {cat.strCategory}
           </option>
@@ -35,6 +35,6 @@ Categories.propTypes = {
 
 Categories.defaultProps = {
   onCategoryChange: null,
-}
+};
 
 export default Categories;

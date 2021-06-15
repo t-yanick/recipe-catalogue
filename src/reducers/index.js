@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import categoriesReducer from './getCategoriesReducer';
-import mealsReducer from './getMealsReducer'
+import mealsReducer from './getMealsReducer';
 import ingredientsReducer from './getIngredientsReducer';
 
 const rootReducer = combineReducers({

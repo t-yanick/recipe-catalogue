@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavBar from "./components/NavBar";
+import NavBar from './components/NavBar';
 import Home from './containers/Home';
 import About from './components/About';
-import './App.css'
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import IngredientsList from './containers/IngredientsList';
 
