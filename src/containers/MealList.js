@@ -10,9 +10,7 @@ import Card from 'react-bootstrap/Card'
 
 const MealList = (props) => {
   const { cat } = props;
-  // const meals = useSelector(state => state.meals?.meals);
   const meals = useSelector(state => state.meals.meals);
-  // const meals = useSelector(state => { console.log(state); return state.meals })
 
   const dispatch = useDispatch();
 

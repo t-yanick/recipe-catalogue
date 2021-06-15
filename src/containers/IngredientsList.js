@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Header, Image, Container, Loader, Table, Segment } from 'semantic-ui-react';
 import Button from 'react-bootstrap/Button';
-// import Button from 'react-bootstrap/Button';
 import { fetchIngredientsStartAsync } from '../actions/getIngredients';
-// import { CardColumns } from 'react-bootstrap';
-// import Card from 'react-bootstrap/Card'
 import '../App.css';
 
 const IngredientsList = () => {
@@ -45,7 +42,7 @@ const IngredientsList = () => {
     <Container style={{ display: 'flex', paddingBottom: 50 }}>
       {ingredients.map(i => (
         <Segment key={i.idMeal}>
-          <p>
+          <p className="mt-4">
             Category:
             {' '}
             {i.strCategory}
