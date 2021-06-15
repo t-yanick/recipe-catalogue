@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { Grid, Image, Container } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 import Button from 'react-bootstrap/Button';
 import { fetchMealsStartAsync } from '../actions/getMeals';
 import { CardColumns } from 'react-bootstrap';
@@ -36,22 +36,15 @@ const MealList = (props) => {
                 }}
               >
                 <Card className="m-2 pb-1" style={{ width: "18rem" }}>
-                  {/* <Image src={meal.strMealThumb} /> */}
                   <Card.Img variant="top" src={meal.strMealThumb} />
-                  {/* <Card.Content> */}
                   <Card.Body>
-                    {/* <Card.Description> */}
                     <Card.Title>
-
                       {meal.strMeal}
                     </Card.Title>
-                    {/* </Card.Description> */}
-
                     <Button variant="primary">
                       Get Recipe
                   </Button>
                   </Card.Body>
-                  {/* </Card.Content> */}
                 </Card>
               </CardColumns>
             ))

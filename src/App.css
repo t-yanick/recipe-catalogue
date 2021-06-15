@@ -51,3 +51,26 @@ h1 {
   float: left;
   width: 33.3%;
 } */
+
+.TableCell {
+  color:orchid;
+  /* text-align: left; */
+  /* text-align: start; */
+  text-align: justify;
+  padding-left: 5rem;
+  padding: 5px !important;
+  background: blue;
+}
+
+.TableHead {
+  color:rgb(9, 147, 240);
+  /* text-align: left; */
+  /* text-align: start; */
+  text-align: justify;
+  padding-left: 5rem;
+}
+
+.Table {
+  width: 50%;
+  border-top: palegreen;
+}

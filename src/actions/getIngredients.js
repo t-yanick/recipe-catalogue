@@ -17,7 +17,7 @@ export const fetchIngredientsFailure = (error) => ({
 
 export const fetchIngredientsStartAsync = (id) => {
   return dispatch => {
-    dispatch(fetchMealsStart());
+    dispatch(fetchIngredientsStart());
     axios
       .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then(res => dispatch(fetchIngredientsSuccess(res.data.meals)))
