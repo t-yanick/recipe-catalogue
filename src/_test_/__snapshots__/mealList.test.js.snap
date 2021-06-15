@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creates a component renders correctly 1`] = `
+<div
+  className="ui container"
+  style={
+    Object {
+      "marginTop": 40,
+    }
+  }
+  textalign="center"
+>
+  <div
+    className="ui grid"
+  >
+    <div
+      className="row"
+    />
+  </div>
+</div>
+`;
