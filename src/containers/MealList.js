@@ -21,7 +21,7 @@ const MealList = (props) => {
   return (
     <Container textalign="center" style={{ marginTop: 40 }}>
       <Grid>
-        <Grid.Row>
+        <Grid.Column className="d-flex flex-wrap mx-5 col-md-12">
           {
             meals && meals.map((meal) => (
               <CardColumns
@@ -33,7 +33,7 @@ const MealList = (props) => {
                   id: meal.idMeal,
                 }}
               >
-                <Card className="m-2 pb-1" style={{ width: '18rem' }}>
+                <Card className="m-1 mx-4 pb-1" style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={meal.strMealThumb} />
                   <Card.Body>
                     <Card.Title>
@@ -47,7 +47,7 @@ const MealList = (props) => {
               </CardColumns>
             ))
           }
-        </Grid.Row>
+        </Grid.Column>
       </Grid>
     </Container>
   );

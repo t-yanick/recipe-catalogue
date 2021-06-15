@@ -14,7 +14,7 @@ exports[`Creates a component renders correctly 1`] = `
     className="ui grid"
   >
     <div
-      className="row"
+      className="column d-flex flex-wrap mx-5 col-md-12"
     />
   </div>
 </div>
