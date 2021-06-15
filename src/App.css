@@ -2,8 +2,17 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,18 +26,20 @@ body {
   background-color: rgb(70, 15, 15);
   display: flex;
   justify-content: space-around;
-  position: sticky;
   height: 5rem;
   opacity: 0.9;
   margin: auto;
   z-index: 1;
   position: sticky;
   top: 0;
-  box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
-  -12px 0 8px -4px rgba(31, 73, 125, 0.8);
-box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
-  12px 0 15px -4px rgba(31, 73, 125, 0.8),
-  -12px 0 15px -4px rgba(31, 73, 125, 0.8);
+  box-shadow:
+    12px 0 15px -4px rgba(31, 73, 125, 0.8),
+    -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+  box-shadow:
+    0 9px 0 0 white,
+    0 -9px 0 0 white,
+    12px 0 15px -4px rgba(31, 73, 125, 0.8),
+    -12px 0 15px -4px rgba(31, 73, 125, 0.8);
 }
 
 .navLinks {
@@ -64,15 +75,14 @@ box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
   border-radius: 15px;
 }
 
-
 .TableCell {
-  color:orchid;
+  color: orchid;
   text-align: justify;
   padding-left: 5rem;
 }
 
 .TableHead {
-  color:rgb(9, 147, 240);
+  color: rgb(9, 147, 240);
   text-align: justify;
   padding-left: 5rem;
 }
