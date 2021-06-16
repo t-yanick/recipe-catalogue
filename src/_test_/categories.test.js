@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-import Categories from '../components/Categories';
+import Categories from '../containers/Categories';
 
 describe('Creates a component', () => {
   const middlewares = [thunk];
